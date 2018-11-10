@@ -1,0 +1,103 @@
+:root {
+    --primary-color: #99C734;
+    --highlight-color: #3899BA;
+    --neutral-dark: #382929;
+    --neutral-light: #fff;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: var(--neutral-dark);
+}
+
+section {
+  margin: 0 auto;
+  width: 30vw;
+  min-width: 20em;
+  background-color: var(--neutral-light);
+}
+
+header {
+  width: 100%;
+  height: 64px;
+  background-color: var(--neutral-light);
+  display: inline-block;
+}
+
+header i, header h6 {
+  display: inline-block;
+}
+
+.station-header {
+  background-color: var(--primary-color);
+  height: 72px;
+}
+
+.walking-distance i, .walking-distance p{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bus-line {
+  height: 88px;
+}
+
+.bus-number {
+  display: inline-block;
+  margin-left: 16px;
+  height: 32px;
+  width: 56px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.bus-number i, .bus-number p{
+  display: inline-flex;
+  vertical-align: middle;
+  padding-top: 4px;
+}
+
+.arrow {
+  display: inline-flex;
+  vertical-align: middle;
+  padding-top: 4px;
+}
+
+.info {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.time {
+  display: inline-block;
+  float: right;
+  text-align: right;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+.time img, .time p {
+  display: table;
+}
+
+.subtitle-2 {
+  text-align: center;
+}
