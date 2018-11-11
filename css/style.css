@@ -1,7 +1,10 @@
 :root {
     --primary-color: #99C734;
     --highlight-color: #3899BA;
+    --highlight-alt-color: #DC7850;
     --neutral-dark: #382929;
+    --neutral-dark-low-opacity: rgba(56, 41, 41, 0.7);
+    --neutral-dark-lowest-opacity: rgba(56, 41, 41, 0.12);
     --neutral-light: #fff;
 }
 
@@ -58,6 +61,27 @@ header i, header h6 {
 
 .bus-line {
   height: 88px;
+  position: relative;
+}
+
+#first {
+  /*background-color: red;*/
+}
+
+.border {
+  height: 1px;
+  width: 75%;
+  /*float: right;*/
+  background-color: var(--neutral-dark-lowest-opacity);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.contents {
+  /*background-color: black;*/
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 
 .bus-number {
@@ -96,6 +120,17 @@ header i, header h6 {
 
 .time img, .time p {
   display: table;
+  width: 100%;
+}
+
+.reroute .bus-number {
+  background-color: var(--highlight-alt-color);
+}
+
+.out-of-service .bus-number {
+  background-color: var(--neutral-light);
+  border: 1px solid var(--neutral-dark-low-opacity);
+  color: var(--neutral-dark-low-opacity);
 }
 
 .subtitle-2 {
