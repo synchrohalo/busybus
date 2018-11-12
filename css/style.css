@@ -24,12 +24,14 @@
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
+
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #000;
+  background-color: var(--neutral-light);
   color: var(--neutral-dark);
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -38,14 +40,14 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 30vw;
+  width: 100%;
   min-width: var(--min-screen-width);
   background-color: var(--neutral-light);
 }
 
 header {
   position: fixed;
-  width: 30vw;
+  width: 100%;
   min-width: var(--min-screen-width);
   z-index: 3;
   height: 64px;
@@ -71,7 +73,7 @@ header h6 {
   position: fixed;
   margin-top: 64px;
   z-index: 3;
-  width: 30vw;
+  width: 100%;
   min-width: var(--min-screen-width);
   background-color: var(--primary-color);
   height: 72px;
@@ -142,7 +144,7 @@ header h6 {
 
 .bus-number {
   display: inline-block;
-  margin-left: 4.4%; /* 16px */
+  margin-left: 16px; /* 16px */
   height: 32px; /* 32px */
   width: 56px; /* 56px */
   background-color: var(--primary-color);
@@ -184,12 +186,26 @@ header h6 {
   text-align: right;
   margin-right: 16px;
   vertical-align: middle;
+  width: 96px;
 }
 
-.time img, .time p {
+.time img {
+  height: 12px;
+}
+
+.sooner, .later {
+  display: inline-flex;
+  float: right;
+}
+
+.later p{
+  padding-top: 4px;
+}
+
+/*.time img, .time p {
   display: table;
   width: 100%;
-}
+}*/
 
 .time .body {
   font-size: 16px;
