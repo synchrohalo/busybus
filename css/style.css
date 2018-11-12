@@ -6,6 +6,8 @@
     --neutral-dark-low-opacity: rgba(56, 41, 41, 0.7);
     --neutral-dark-lowest-opacity: rgba(56, 41, 41, 0.12);
     --neutral-light: #fff;
+    --black-shadow: rgba(0, 0, 0, 0.24);
+    --min-screen-width: 25em;
 }
 
 /* Rules for sizing the icon. */
@@ -29,34 +31,88 @@
 body {
   background-color: #000;
   color: var(--neutral-dark);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.25px;
 }
 
-section {
+.container {
   margin: 0 auto;
   width: 30vw;
-  min-width: 20em;
+  min-width: var(--min-screen-width);
   background-color: var(--neutral-light);
 }
 
 header {
-  width: 100%;
+  position: fixed;
+  width: 30vw;
+  min-width: var(--min-screen-width);
+  z-index: 3;
   height: 64px;
   background-color: var(--neutral-light);
   display: inline-block;
+  padding-left: 16px;
 }
 
 header i, header h6 {
-  display: inline-block;
+  display: inline-flex;
+  vertical-align: middle;
+  padding-top: 18px;
+}
+
+header h6 {
+  font-family: Muli, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  padding-left: 32px;
 }
 
 .station-header {
+  position: fixed;
+  margin-top: 64px;
+  z-index: 3;
+  width: 30vw;
+  min-width: var(--min-screen-width);
   background-color: var(--primary-color);
   height: 72px;
+  box-shadow: 0px 2px 4px var(--black-shadow);
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.subtitle-1 {
+  font-family: Muli, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+  margin-bottom: 8px;
+}
+
+.name-walking-distance {
+  display: inline-block;
 }
 
 .walking-distance i, .walking-distance p{
   display: inline-block;
   vertical-align: middle;
+}
+
+.right-chevron {
+  display: inline-block;
+  float: right;
+  text-align: right;
+  margin-right: 16px;
+  padding-top: 8px;
+}
+
+.caption {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+}
+
+.bus-line-list {
+  padding-top: 136px;
 }
 
 .bus-line {
@@ -80,15 +136,15 @@ header i, header h6 {
 
 .contents {
   /*background-color: black;*/
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .bus-number {
   display: inline-block;
-  margin-left: 16px;
-  height: 32px;
-  width: 56px;
+  margin-left: 4.4%; /* 16px */
+  height: 32px; /* 32px */
+  width: 56px; /* 56px */
   background-color: var(--primary-color);
   border-radius: 4px;
 }
@@ -110,6 +166,18 @@ header i, header h6 {
   vertical-align: middle;
 }
 
+.direction {
+  color: var(--neutral-dark-low-opacity);
+}
+
+.overline {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  line-height: 24px;
+}
+
 .time {
   display: inline-block;
   float: right;
@@ -121,6 +189,13 @@ header i, header h6 {
 .time img, .time p {
   display: table;
   width: 100%;
+}
+
+.time .body {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .reroute .bus-number {
