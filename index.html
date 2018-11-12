@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BusyBus Stations Near Me</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/switch.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,700|Roboto:400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -13,12 +14,24 @@
   <body>
     <section class="container">
 
+      <div class="more-menu">
+        <p>Night mode</p>
+        <input type="checkbox" id="nightmode-switch" name="set-name" class="switch-input">
+      	<label for="nightmode-switch" class="switch-label"><span class="toggle--on">On</span><span class="toggle--off">Off</span></label>
+      </div>
+
       <!-- top bar -->
       <header>
         <i class="material-icons">
-          arrow_back
+          keyboard_arrow_down
         </i> <!-- back icon -->
         <h6 class="page-title">Stations near me</h6>
+
+        <div class="more">
+          <i class="material-icons">
+            more_vert
+          </i>
+        </div>
       </header>
 
       <!-- stations list -->
@@ -317,4 +330,7 @@
 
     </section>
   </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 </html>

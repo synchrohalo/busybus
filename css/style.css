@@ -1,11 +1,13 @@
 :root {
-    --primary-color: #99C734;
+    --primary-color: #A7D14B;
     --highlight-color: #3899BA;
     --highlight-alt-color: #DC7850;
     --neutral-dark: #382929;
     --neutral-dark-low-opacity: rgba(56, 41, 41, 0.7);
     --neutral-dark-lowest-opacity: rgba(56, 41, 41, 0.12);
     --neutral-light: #fff;
+    --neutral-light-low-opacity: rgba(256, 256, 256, 0.75);
+    --neutral-light-lowest-opacity: rgba(256, 256, 256, 0.2);
     --black-shadow: rgba(0, 0, 0, 0.24);
     --min-screen-width: 25em;
 }
@@ -60,6 +62,40 @@ header i, header h6 {
   display: inline-flex;
   vertical-align: middle;
   padding-top: 18px;
+}
+
+.more {
+  display: inline-block;
+  float: right;
+  text-align: right;
+  margin-right: 16px;
+}
+
+.more:hover {
+  cursor: pointer;
+}
+
+.more-menu {
+  visibility: hidden;
+  position: fixed;
+  z-index: 5;
+  background-color: var(--neutral-light);
+  box-shadow: 2px 2px 12px var(--black-shadow);
+  right: 16px;
+  top: 48px;
+  height: 48px;
+  width: 212px;
+  border-radius: 4px;
+}
+
+.more-menu p {
+  padding: 16px;
+  height: 32px;
+}
+
+.switch-label, .more-menu p {
+  display: inline-flex;
+  margin-top: 0px;
 }
 
 header h6 {
@@ -226,4 +262,44 @@ header h6 {
 
 .subtitle-2 {
   text-align: center;
+}
+
+.bus-line.dark {
+  background-color: var(--neutral-dark);
+  color: var(--neutral-light);
+}
+
+.bus-line.dark .border {
+  background-color: var(--neutral-light-lowest-opacity);
+}
+
+.bus-line.dark.out-of-service .bus-number {
+  background-color: var(--neutral-light-low-opacity);
+  color: var(--neutral-dark);
+  border: 0px;
+}
+
+.bus-line.dark .arrow {
+  color: var(--primary-color);
+}
+
+.bus-line.dark.reroute .arrow, .bus-line.dark.reroute .info .overline {
+  color: var(--highlight-alt-color);
+}
+
+.bus-line.dark.out-of-service .arrow, .bus-line.dark.out-of-service .info .overline {
+  color: var(--neutral-light-low-opacity);
+}
+
+.bus-line.dark .bus-number {
+  color: var(--neutral-dark);
+}
+
+.bus-line.dark .info .overline{
+  color: var(--primary-color);
+}
+
+
+.bus-line.dark .info p{
+  color: var(--neutral-light-low-opacity);
 }
