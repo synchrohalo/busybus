@@ -14,18 +14,12 @@
   <body>
     <section class="container">
 
-      <div class="more-menu">
-        <p>Night mode</p>
-        <input type="checkbox" id="nightmode-switch" name="set-name" class="switch-input">
-      	<label for="nightmode-switch" class="switch-label"><span class="toggle--on">On</span><span class="toggle--off">Off</span></label>
-      </div>
-
       <!-- top bar -->
       <header>
         <i class="material-icons">
-          keyboard_arrow_down
+          arrow_back
         </i> <!-- back icon -->
-        <h6 class="page-title">Stations near me</h6>
+        <h6 class="page-title">Stops near me</h6>
 
         <div class="more">
           <i class="material-icons">
@@ -40,10 +34,8 @@
 
           <!-- station header -->
           <div class="station-header">
-
             <div class="name-walking-distance">
               <p class="subtitle-1">Washington & State Street</p>
-
               <div class="walking-distance">
                 <i class="material-icons md-18">
                   directions_walk
@@ -51,279 +43,21 @@
                 <p class="caption">1 min. walk to stop</p>
               </div>
             </div>
-
             <i class="material-icons right-chevron">
               chevron_right
-            </i>
+            </i> <!-- right chevron icon -->
+          </div>
+
+          <!-- column header -->
+          <div class="column-header">
+            <p class="caption">Bus</p>
+            <p class="caption mid-col">Destination / Fare</p>
+            <p class="caption right-col"><img class="live" src="img/live-animated.gif" />Departures</p>
           </div>
 
           <!-- buses -->
           <ul class="bus-line-list">
-
-            <!-- bus line -->
-            <li class="bus-line" id="first">
-
-              <div class="contents">
-                <div class="bus-number">
-                  <i class="material-icons">
-                    directions_bus
-                  </i>
-                  <p class="subtitle-2">J14</p>
-                </div>
-
-                <div class="arrow">
-                  <i class="material-icons">
-                    arrow_forward
-                  </i> <!-- arrow icon -->
-                </div>
-
-                <div class="info">
-                  <p class="direction"><span class="overline">Southbound</span> &#8226; $2.00</p>
-                  <p class="body-2">103rd/Stony Island</p>
-                </div>
-
-                <div class="time">
-                  <div class="sooner">
-                    <img class="live" src="img/live-animated.gif" /> <!-- live icon -->
-                    <p class="body">4 min</p>
-                  </div>
-
-                  <div class="later">
-                    <img class="live" src="img/live-animated.gif" /><!-- live icon -->
-                    <p >19, 34 min</p>
-                  </div>
-                </div>
-
-                <div class="border"></div>
-              </div>
-            </li>
-
-            <!-- bus line -->
-            <li class="bus-line">
-
-              <div class="contents">
-                <div class="bus-number">
-                  <i class="material-icons">
-                    directions_bus
-                  </i>
-                  <p class="subtitle-2">J14</p>
-                </div>
-
-                <div class="arrow">
-                  <i class="material-icons">
-                    arrow_forward
-                  </i> <!-- arrow icon -->
-                </div>
-
-                <div class="info">
-                  <p class="direction"><span class="overline">Southbound</span> &#8226; $2.00</p>
-                  <p class="body-2">103rd/Stony Island</p>
-                </div>
-
-                <div class="time">
-                  <div class="sooner">
-                    <img class="live" src="img/live-animated.gif" /> <!-- live icon -->
-                    <p class="body">4 min</p>
-                  </div>
-
-                  <div class="later">
-                    <img class="live" src="img/live-animated.gif" /><!-- live icon -->
-                    <p >19, 34 min</p>
-                  </div>
-                </div>
-
-                <div class="border"></div>
-              </div>
-            </li>
-
-            <!-- bus line -->
-            <li class="bus-line" id="first">
-
-              <div class="contents">
-                <div class="bus-number">
-                  <i class="material-icons">
-                    directions_bus
-                  </i>
-                  <p class="subtitle-2">J14</p>
-                </div>
-
-                <div class="arrow">
-                  <i class="material-icons">
-                    arrow_forward
-                  </i> <!-- arrow icon -->
-                </div>
-
-                <div class="info">
-                  <p class="direction"><span class="overline">Southbound</span> &#8226; $2.00</p>
-                  <p class="body-2">103rd/Stony Island</p>
-                </div>
-
-                <div class="time">
-                  <div class="sooner">
-                    <img class="live" src="img/live-animated.gif" /> <!-- live icon -->
-                    <p class="body">4 min</p>
-                  </div>
-
-                  <div class="later">
-                    <img class="live" src="img/live-animated.gif" /><!-- live icon -->
-                    <p >19, 34 min</p>
-                  </div>
-                </div>
-
-                <div class="border"></div>
-              </div>
-            </li>
-
-            <!-- bus line -->
-            <li class="bus-line" id="first">
-
-              <div class="contents">
-                <div class="bus-number">
-                  <i class="material-icons">
-                    directions_bus
-                  </i>
-                  <p class="subtitle-2">J14</p>
-                </div>
-
-                <div class="arrow">
-                  <i class="material-icons">
-                    arrow_forward
-                  </i> <!-- arrow icon -->
-                </div>
-
-                <div class="info">
-                  <p class="direction"><span class="overline">Southbound</span> &#8226; $2.00</p>
-                  <p class="body-2">103rd/Stony Island</p>
-                </div>
-
-                <div class="time">
-                  <div class="sooner">
-                    <img class="live" src="img/live-animated.gif" /> <!-- live icon -->
-                    <p class="body">4 min</p>
-                  </div>
-
-                  <div class="later">
-                    <img class="live" src="img/live-animated.gif" /><!-- live icon -->
-                    <p >19, 34 min</p>
-                  </div>
-                </div>
-
-                <div class="border"></div>
-              </div>
-            </li>
-
-            <!-- bus line -->
-            <li class="bus-line" id="first">
-
-              <div class="contents">
-                <div class="bus-number">
-                  <i class="material-icons">
-                    directions_bus
-                  </i>
-                  <p class="subtitle-2">J14</p>
-                </div>
-
-                <div class="arrow">
-                  <i class="material-icons">
-                    arrow_forward
-                  </i> <!-- arrow icon -->
-                </div>
-
-                <div class="info">
-                  <p class="direction"><span class="overline">Southbound</span> &#8226; $2.00</p>
-                  <p class="body-2">103rd/Stony Island</p>
-                </div>
-
-                <div class="time">
-                  <div class="sooner">
-                    <img class="live" src="img/live-animated.gif" /> <!-- live icon -->
-                    <p class="body">4 min</p>
-                  </div>
-
-                  <div class="later">
-                    <img class="live" src="img/live-animated.gif" /><!-- live icon -->
-                    <p >19, 34 min</p>
-                  </div>
-                </div>
-
-                <div class="border"></div>
-              </div>
-            </li>
-
-            <!-- bus line -->
-            <li class="bus-line reroute">
-              <div class="contents">
-                <div class="bus-number">
-                  <i class="material-icons">
-                    directions_bus
-                  </i>
-                  <p class="subtitle-2">J14</p>
-                </div>
-
-                <div class="arrow">
-                  <i class="material-icons">
-                    arrow_forward
-                  </i> <!-- arrow icon -->
-                </div>
-
-                <div class="info">
-                  <p class="direction"><span class="overline">Southbound</span> &#8226; $2.00</p>
-                  <p class="body-2">103rd/Stony Island</p>
-                </div>
-
-                <div class="time">
-                  <div class="sooner">
-                    <img class="live" src="img/live-animated.gif" /> <!-- live icon -->
-                    <p class="body">4 min</p>
-                  </div>
-
-                  <div class="later">
-                    <img class="live" src="img/live-animated.gif" /><!-- live icon -->
-                    <p >19, 34 min</p>
-                  </div>
-                </div>
-
-                <div class="border"></div>
-              </div>
-            </li>
-
-            <!-- bus line -->
-            <li class="bus-line out-of-service">
-              <div class="contents">
-                <div class="bus-number">
-                  <i class="material-icons">
-                    directions_bus
-                  </i>
-                  <p class="subtitle-2">J14</p>
-                </div>
-
-                <div class="arrow">
-                  <i class="material-icons">
-                    arrow_forward
-                  </i> <!-- arrow icon -->
-                </div>
-
-                <div class="info">
-                  <p class="direction"><span class="overline">Southbound</span> &#8226; $2.00</p>
-                  <p class="body-2">103rd/Stony Island</p>
-                </div>
-
-                <div class="time">
-                  <div class="sooner">
-                    <img class="live" src="img/live-animated.gif" /> <!-- live icon -->
-                    <p class="body">4 min</p>
-                  </div>
-
-                  <div class="later">
-                    <img class="live" src="img/live-animated.gif" /><!-- live icon -->
-                    <p >19, 34 min</p>
-                  </div>
-                </div>
-
-                <div class="border"></div>
-              </div>
-            </li>
-
+            <!-- append list of bus lines here -->
           </ul>
         </li>
       </ul>
@@ -332,5 +66,6 @@
   </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/BusLine.js"></script>
   <script src="js/script.js"></script>
 </html>

@@ -1,0 +1,20 @@
+BusyBus? ?route? ?data
+Eastbound
+Line Destination Frequency
+60 Randolph/Harbor Dr Every 20 minutes
+124 Navy Pier Every 10 minutes
+Northbound
+Line Destination Frequency
+151 Devon/Clark Every 16 minutes
+Southbound
+Line Destination Frequency
+J14 103rd/Stony Island Every 15 minutes
+124 Navy Pier Every 10 minutes
+Reroute
+Line Destination Frequency
+6x Jackson Park Express N/A
+Out of service
+Line Destination Frequency
+4 Cottage Grove Resumes 12:10am
+20 Madison Resumes 12:10am
+157 Streeterville/Taylor Resumes 6:00am

@@ -1,5 +1,7 @@
+/*** VARIABLES ***/
 :root {
     --primary-color: #A7D14B;
+    --primary-color-dark: #75A013;
     --highlight-color: #3899BA;
     --highlight-alt-color: #DC7850;
     --neutral-dark: #382929;
@@ -12,21 +14,12 @@
     --min-screen-width: 25em;
 }
 
+/*** FROM MATERIAL.IO ***/
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
-
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-
-
 
 * {
   box-sizing: border-box;
@@ -47,6 +40,7 @@ body {
   background-color: var(--neutral-light);
 }
 
+/*** TOP BAR ***/
 header {
   position: fixed;
   width: 100%;
@@ -57,26 +51,28 @@ header {
   display: inline-block;
   padding-left: 16px;
 }
-
 header i, header h6 {
   display: inline-flex;
   vertical-align: middle;
   padding-top: 18px;
 }
+header h6 {
+  font-family: Muli, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  padding-left: 32px;
+}
 
+/*** MORE ***/
 .more {
   display: inline-block;
   float: right;
   text-align: right;
   margin-right: 16px;
 }
-
-.more:hover {
-  cursor: pointer;
-}
-
 .more-menu {
-  visibility: hidden;
+  display: none;
   position: fixed;
   z-index: 5;
   background-color: var(--neutral-light);
@@ -84,27 +80,20 @@ header i, header h6 {
   right: 16px;
   top: 48px;
   height: 48px;
-  width: 212px;
+  width: 0;
   border-radius: 4px;
 }
-
 .more-menu p {
   padding: 16px;
   height: 32px;
 }
-
 .switch-label, .more-menu p {
   display: inline-flex;
+  display: none;
   margin-top: 0px;
 }
 
-header h6 {
-  font-family: Muli, sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.15px;
-  padding-left: 32px;
-}
-
+/*** STATION HEADER ***/
 .station-header {
   position: fixed;
   margin-top: 64px;
@@ -113,29 +102,25 @@ header h6 {
   min-width: var(--min-screen-width);
   background-color: var(--primary-color);
   height: 72px;
-  box-shadow: 0px 2px 4px var(--black-shadow);
   padding-left: 16px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
-
 .subtitle-1 {
   font-family: Muli, sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.15px;
+  line-height: 20px;
   margin-bottom: 8px;
 }
-
 .name-walking-distance {
   display: inline-block;
 }
-
 .walking-distance i, .walking-distance p{
   display: inline-block;
   vertical-align: middle;
 }
-
 .right-chevron {
   display: inline-block;
   float: right;
@@ -143,71 +128,94 @@ header h6 {
   margin-right: 16px;
   padding-top: 8px;
 }
-
 .caption {
   font-size: 12px;
   letter-spacing: 0.4px;
+  line-height: 14px;
 }
 
+/*** COLUMN HEADER ***/
+.column-header {
+  position: fixed;
+  margin-top: 136px;
+  padding-left: 16px;
+  z-index: 3;
+  width: 100%;
+  height: 32px;
+  background-color: var(--neutral-light);
+  border-bottom: 1px solid var(--neutral-dark-lowest-opacity);
+  /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);*/
+}
+.column-header .caption {
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.live {
+  height: 10px;
+  padding-right: 8px;
+}
+.mid-col {
+  padding-left: 60px;
+}
+.right-col {
+  float: right;
+  padding-right: 16px;
+}
+
+/*** BUS LINES ***/
 .bus-line-list {
-  padding-top: 136px;
+  padding-top: 168px;
 }
-
 .bus-line {
   height: 88px;
   position: relative;
 }
-
-#first {
-  /*background-color: red;*/
-}
-
 .border {
   height: 1px;
   width: 75%;
-  /*float: right;*/
   background-color: var(--neutral-dark-lowest-opacity);
   position: absolute;
   bottom: 0;
   right: 0;
 }
-
 .contents {
-  /*background-color: black;*/
   padding-top: 24px;
   padding-bottom: 24px;
 }
 
+/*** BUS NUMBER ***/
 .bus-number {
-  display: inline-block;
-  margin-left: 16px; /* 16px */
-  height: 32px; /* 32px */
-  width: 56px; /* 56px */
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  margin-left: 16px;
+  height: 32px;
+  width: 56px;
   background-color: var(--primary-color);
   border-radius: 4px;
 }
-
-.bus-number i, .bus-number p{
-  display: inline-flex;
-  vertical-align: middle;
-  padding-top: 4px;
+.subtitle-2 {
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  font-family: Muli, sans-serif;
+  text-align: center;
 }
 
+/*** BUS INFO ***/
 .arrow {
   display: inline-flex;
   vertical-align: middle;
   padding-top: 4px;
 }
-
 .info {
   display: inline-block;
   vertical-align: middle;
 }
-
 .direction {
   color: var(--neutral-dark-low-opacity);
 }
-
 .overline {
   font-size: 10px;
   font-weight: 500;
@@ -216,6 +224,7 @@ header h6 {
   line-height: 24px;
 }
 
+/*** TIMES ***/
 .time {
   display: inline-block;
   float: right;
@@ -224,25 +233,13 @@ header h6 {
   vertical-align: middle;
   width: 96px;
 }
-
 .time img {
   height: 8px;
 }
-
 .sooner, .later {
   display: inline-flex;
   float: right;
 }
-
-.later p{
-  padding-top: 4px;
-}
-
-/*.time img, .time p {
-  display: table;
-  width: 100%;
-}*/
-
 .time .body {
   font-size: 16px;
   letter-spacing: 0.5px;
@@ -250,56 +247,25 @@ header h6 {
   padding-bottom: 4px;
 }
 
+/*** REROUTE ***/
 .reroute .bus-number {
   background-color: var(--highlight-alt-color);
 }
+.reroute .time .caption {
+  display: inline-flex;
+  float: right;
+  width: 64px;
+  padding-top: 8px;
+  color: var(--neutral-dark-low-opacity);
+}
 
+/*** OUT OF SERVICE ***/
 .out-of-service .bus-number {
   background-color: var(--neutral-light);
   border: 1px solid var(--neutral-dark-low-opacity);
   color: var(--neutral-dark-low-opacity);
 }
-
-.subtitle-2 {
-  text-align: center;
-}
-
-.bus-line.dark {
-  background-color: var(--neutral-dark);
-  color: var(--neutral-light);
-}
-
-.bus-line.dark .border {
-  background-color: var(--neutral-light-lowest-opacity);
-}
-
-.bus-line.dark.out-of-service .bus-number {
-  background-color: var(--neutral-light-low-opacity);
-  color: var(--neutral-dark);
-  border: 0px;
-}
-
-.bus-line.dark .arrow {
-  color: var(--primary-color);
-}
-
-.bus-line.dark.reroute .arrow, .bus-line.dark.reroute .info .overline {
-  color: var(--highlight-alt-color);
-}
-
-.bus-line.dark.out-of-service .arrow, .bus-line.dark.out-of-service .info .overline {
-  color: var(--neutral-light-low-opacity);
-}
-
-.bus-line.dark .bus-number {
-  color: var(--neutral-dark);
-}
-
-.bus-line.dark .info .overline{
-  color: var(--primary-color);
-}
-
-
-.bus-line.dark .info p{
-  color: var(--neutral-light-low-opacity);
+.out-of-service .time .body {
+  padding-top: 12px;
+  color: var(--neutral-dark-low-opacity);
 }
