@@ -144,7 +144,6 @@ header h6 {
   height: 32px;
   background-color: var(--neutral-light);
   border-bottom: 1px solid var(--neutral-dark-lowest-opacity);
-  /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);*/
 }
 .column-header .caption {
   display: inline-block;
